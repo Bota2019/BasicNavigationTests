@@ -90,7 +90,7 @@ public class NavigationTests {
         driver.navigate().back();
         String title3 = driver.getTitle();
         StringUtility.verifyEqual(title1, driver.getTitle());
-               // ilk deneme
+        System.out.println("bota");
         driver.navigate().forward();
         driver.quit();
 
