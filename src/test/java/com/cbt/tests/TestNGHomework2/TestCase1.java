@@ -102,6 +102,7 @@ public class TestCase1 {
             boolean text=each.isDisplayed();
             count++;
             System.out.println(count+ ". schedule is displayed");
+            // New Changes
         }
      }
 }
