@@ -1,11 +1,8 @@
 package com.cbt.tests;
 
-        import com.cbt.utilities.BrowserFactory;
+        import com.cbt.utilities.WebDriverFactory;
         import com.cbt.utilities.StringUtility;
         import org.openqa.selenium.WebDriver;
-
-        import java.util.Arrays;
-        import java.util.List;
 
 public class NavigationTests {
     /*
@@ -34,15 +31,14 @@ public class NavigationTests {
 
 
 
-
-     Chrome("chrome");
+        Chrome("chrome");
        FireFox("firefox");
             Safari("safari");
     }
         public static void Chrome (String browser){
             // open browser
 
-            WebDriver driver = BrowserFactory.getDriver(browser);
+            WebDriver driver = WebDriverFactory.getDriver(browser);
             // go to website https://google.com
             driver.get("https://google.com");
             //save the title in a String variable
@@ -56,14 +52,14 @@ public class NavigationTests {
             driver.navigate().back();
             //Verify that title is same as page 3
             String title3 = driver.getTitle();
-            StringUtility.verifyEqual(title1, driver.getTitle());
+
             //Navigate forward to previous page
             driver.navigate().forward();
             driver.quit();
         }
 
         public static void FireFox (String browser){
-            WebDriver driver = BrowserFactory.getDriver(browser);
+            WebDriver driver = WebDriverFactory.getDriver(browser);
             driver.get("https://google.com");
             String title1 = driver.getTitle();
 
@@ -82,7 +78,7 @@ public class NavigationTests {
         }
 
     public static void Safari (String browser){
-        WebDriver driver = BrowserFactory.getDriver(browser);
+        WebDriver driver = WebDriverFactory.getDriver(browser);
         driver.get("https://google.com");
         String title1 = driver.getTitle();
 

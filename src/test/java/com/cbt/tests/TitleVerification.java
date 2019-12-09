@@ -1,7 +1,6 @@
 package com.cbt.tests;
 
-import com.cbt.utilities.BrowserFactory;
-import com.cbt.utilities.StringUtility;
+import com.cbt.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Arrays;
@@ -18,7 +17,7 @@ public class TitleVerification {
     }
 
     public static void getUrl(String url){
-        WebDriver driver = BrowserFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get(url);
         String title = driver.getTitle();
         System.out.println(title);
@@ -26,7 +25,7 @@ public class TitleVerification {
         System.out.println(nospace);
         String currentUrl = driver.getCurrentUrl();
         System.out.println(currentUrl);
-        StringUtility.verifyContains(nospace,currentUrl);
+       // StringUtility.verifyContains(nospace,currentUrl);
 
         //driver.qu
 
